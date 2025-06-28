@@ -8,6 +8,6 @@ RUN npm run build
 
 #fase2 send build app to nginx
 FROM nginx:1.27
-COPY --from=build  /app/dist/shop /usr/share/nginx/html
+COPY --from=build  /app/dist/courses /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
